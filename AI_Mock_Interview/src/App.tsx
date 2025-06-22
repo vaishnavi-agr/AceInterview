@@ -15,9 +15,18 @@ import { MockLoadPage } from "./routes/mock-load-page";
 import { MockInterviewPage } from "./routes/mock-interview-page";
 import { Feedback } from "./routes/feedback";
 
+// 🔹 Import your test component
+import { TestMic } from "./components/TestMic";
+
 const App = () => {
   return (
     <Router>
+      {/* 🔹 TEMP: Render TestMic above Routes to isolate mic issue */}
+      {/* <div style={{ border: "2px dashed red", padding: "1rem", marginBottom: "1rem" }}>
+        <h2>Mic Test Area (Remove after testing)</h2>
+        <TestMic />
+      </div> */}
+
       <Routes>
         {/* public routes */}
         <Route element={<PublicLayout />}>
